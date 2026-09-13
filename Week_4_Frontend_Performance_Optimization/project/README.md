@@ -60,14 +60,14 @@ The baseline Lighthouse audit reported Performance 100, Accessibility 96, Best P
 
 The following focused changes were applied:
 
-- Recompressed the existing local JPG placeholders and reduced their dimensions.
+- Recompressed local JPG product photography and reduced its dimensions.
 - Added `width` and `height` to image elements to reserve layout space.
 - Prioritized the above-the-fold hero image with preload and high fetch priority.
 - Added lazy loading to product images below the fold.
 - Deferred the minified JavaScript file; readable source files remain in place for development and documentation.
 - Served minified CSS and JavaScript in the production HTML while retaining readable source files.
 
-The local static server cannot configure production HTTP cache headers. The included `cache-headers.conf.example` shows the deployment-level policy to apply on a server that supports response headers. No after-optimization Lighthouse score is claimed; run a second audit to measure it.
+The local static server cannot configure production HTTP cache headers. The included `cache-headers.conf.example` shows the deployment-level policy to apply on a server that supports response headers. The supplied AFTER Lighthouse screenshot recorded Performance 99, Accessibility 96, Best Practices 100, and SEO 100; see the packaged report for the full comparison.
 
 The six product card images now use local, resized JPG copies of product photography sourced from Unsplash. The website does not request those external image URLs at runtime.
 
@@ -82,7 +82,7 @@ Week_4_Frontend_Performance_Optimization/
 └── screenshots/
 ```
 
-The report source is `../report/Week_4_Performance_Optimization_Report.md` when viewed from the packaged `project/` folder. The AFTER Lighthouse values and screenshot files are currently marked `Not available` because they were not supplied. Add the real second-audit results and captures before exporting the report to PDF.
+The report source is `../report/Week_4_Performance_Optimization_Report.md` when viewed from the packaged `project/` folder. Add the actual screenshot files to `../screenshots/` before exporting the report to PDF.
 
 ## Testing
 
